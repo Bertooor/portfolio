@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 
 body {
   color: #140f07;
+  font-family: "Roboto", sans-serif;
 }
 
 body > header {
@@ -32,6 +35,7 @@ body > header nav ul li {
 body > header nav ul li a {
   text-decoration: none;
   color: #f3f3f3;
+  font-weight: bold;
 }
 
 #sobremi {
@@ -40,10 +44,20 @@ body > header nav ul li a {
   margin-top: 2rem;
 }
 
+#sobremi h1 {
+  padding: 1rem 0;
+}
+
 #sobremi p,
 #contacto address p,
 #proyectos p {
   margin: 0.5rem;
+}
+
+#sobremi a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a437a;
 }
 
 #sobremi img {
@@ -52,13 +66,14 @@ body > header nav ul li a {
   margin: 0 auto;
 }
 
-#contacto {
-  padding: 2rem;
-}
-
 #proyectos {
   background-color: #e4e0ed;
   padding: 2rem;
+}
+
+#proyectos h2,
+#proyectos h3 {
+  color: #1a437a;
 }
 
 #proyectos h2,
@@ -75,26 +90,160 @@ footer {
 
 #proyectos ul li {
   display: inline-block;
-  border: 1px solid black;
-  margin: 10px;
+  border: 2px solid #1a437a;
+  margin: 2rem;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 5px;
-  /* box-shadow: rgba(100, 77, 92, 0.4) 5px 5px, rgba(100, 77, 92, 0.3) 10px 10px,
-    rgba(100, 77, 92, 0.2) 15px 15px, rgba(100, 77, 92, 0.1) 20px 20px,
-    rgba(100, 77, 92, 0.05) 25px 25px; */
+  box-shadow: rgba(26, 67, 122, 0.4) 5px 5px, rgba(26, 67, 122, 0.3) 10px 10px,
+    rgba(26, 67, 122, 0.2) 15px 15px, rgba(26, 67, 122, 0.1) 20px 20px,
+    rgba(26, 67, 122, 0.05) 25px 25px;
+}
+
+#proyectos ul li img {
+  height: 150px;
+}
+
+#proyectos ul li .logoLlovera {
+  font-size: 150px;
+}
+
+#proyectos ul li p img.mysql {
+  height: 2rem;
+}
+
+#proyectos ul li p .iconos {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+#proyectos ul li p .iconos.html {
+  color: #e34c26;
+}
+
+#proyectos ul li p .iconos.css {
+  color: #2965f1;
+}
+
+#proyectos ul li p .iconos.js {
+  color: #f0db4f;
+}
+
+#proyectos ul li p .iconos.node {
+  color: #3c873a;
+}
+
+#proyectos ul li p .iconos.react {
+  color: #61dbfb;
+}
+
+#proyectos hr {
+  height: 10px;
+  border: 1;
+  border-radius: 5px;
+  width: 50%;
+  margin: 3rem auto 2rem auto;
+  background-color: #1a437a;
+  background-image: linear-gradient(
+    43deg,
+    #1a437a 0%,
+    #e4e0ed 46%,
+    #f3f3f3 100%
+  );
 }
 
 #contacto {
   background-color: #f3f3f3;
+  padding: 2rem;
 }
 
-#contacto address p img {
-  height: 40px;
-  margin: 0 0.5rem;
+#contacto address p.iconosContacto {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#contacto address p label {
+  font-size: 40px;
+}
+
+#contacto address p label.whatsapp a {
+  color: #00e676;
+}
+
+#contacto address p label.linkedin a {
+  color: #0a66c2;
 }
 
 footer {
   background-color: #e4e0ed;
   padding: 2rem;
+}
+
+@media (min-width: 750px) {
+  body > header nav ul {
+    gap: 5rem;
+  }
+
+  body > header nav ul li a {
+    font-size: 1.3rem;
+  }
+
+  #sobremi {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "nombre     imagenpersonal"
+      "paf1       imagenpersonal"
+      "paf2       imagenpersonal"
+      "paf3       imagenpersonal";
+  }
+
+  #nombre {
+    grid-area: nombre;
+    font-size: 1.8rem;
+  }
+
+  #paf1 {
+    grid-area: paf1;
+    font-size: 1.1rem;
+  }
+
+  #paf2 {
+    grid-area: paf2;
+    font-size: 1.1rem;
+  }
+
+  #paf3 {
+    grid-area: paf3;
+    font-size: 1.1rem;
+  }
+
+  #sobremi #nombre,
+  #sobremi #paf1,
+  #sobremi #paf2,
+  #sobremi #paf3 {
+    text-align: right;
+  }
+
+  #sobremi #imagenpersonal {
+    grid-area: imagenpersonal;
+    height: 300px;
+    margin: 0;
+  }
+
+  #proyectos p.servidor {
+    font-size: 1.1rem;
+    max-width: 70%;
+    margin: 0.5rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #sobremi #nombre,
+  #sobremi #paf1,
+  #sobremi #paf2,
+  #sobremi #paf3 {
+    max-width: 80%;
+    margin-left: 150px;
+  }
 }
