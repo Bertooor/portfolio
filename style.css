@@ -11,6 +11,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/**
+ * ############
+ * ## Header ##
+ * ############
+ */
+
 body > header {
   padding: 1rem;
   display: flex;
@@ -37,6 +43,12 @@ body > header nav ul li a {
   color: #f3f3f3;
   font-weight: bold;
 }
+
+/**
+ * ##############
+ * ## Sobre mi ##
+ * ##############
+ */
 
 #sobremi {
   padding: 2rem 2rem 0 2rem;
@@ -65,6 +77,12 @@ body > header nav ul li a {
   display: block;
   margin: 0 auto;
 }
+
+/**
+ * ###############
+ * ## Proyectos ##
+ * ###############
+ */
 
 #proyectos {
   background-color: #e4e0ed;
@@ -136,6 +154,12 @@ footer {
   color: #61dbfb;
 }
 
+#proyectos ul li p.enlaces a {
+  color: black;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
 #proyectos hr {
   height: 10px;
   border: 1;
@@ -150,6 +174,12 @@ footer {
     #f3f3f3 100%
   );
 }
+
+/**
+ * ##############
+ * ## Contacto ##
+ * ##############
+ */
 
 #contacto {
   background-color: #f3f3f3;
@@ -180,6 +210,12 @@ footer {
 }
 
 @media (min-width: 750px) {
+  /**
+ * ############
+ * ## Header ##
+ * ############
+ */
+
   body > header nav ul {
     gap: 5rem;
   }
@@ -187,6 +223,12 @@ footer {
   body > header nav ul li a {
     font-size: 1.3rem;
   }
+
+  /**
+ * ##############
+ * ## Sobre mi ##
+ * ##############
+ */
 
   #sobremi {
     display: grid;
@@ -230,6 +272,12 @@ footer {
     height: 300px;
     margin: 0;
   }
+
+  /**
+ * ###############
+ * ## Proyectos ##
+ * ###############
+ */
 
   #proyectos p.servidor {
     font-size: 1.1rem;
